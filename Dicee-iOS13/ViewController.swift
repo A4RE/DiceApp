@@ -23,12 +23,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        // We generate random numbers in range 0 to 6
-        var firstRandomNumber = Int.random(in: 0..<diceArray.count)
-        var secondRandomNumber = Int.random(in: 0..<diceArray.count)
         // We take values from array by indicies we randomly generate
-        diceImageViewOne.image = UIImage(named: "\(diceArray[firstRandomNumber])")
-        diceImageViewTwo.image = UIImage(named: "\(diceArray[secondRandomNumber])")
+        diceImageViewOne.image = UIImage(named: "\(diceArray[Int.random(in: 0..<diceArray.count)])")
+        diceImageViewTwo.image = UIImage(named: "\(diceArray[Int.random(in: 0..<diceArray.count)])")
     }
     
 }
